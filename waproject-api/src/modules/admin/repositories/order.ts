@@ -16,6 +16,14 @@ export class OrderRepository {
       .select('*')
       .page(params.page, params.pageSize);
 
+    if (params.orderBy) {
+      query = query.orderBy(params.orderBy, params.orderDirection);
+    }
+
+    if (params.term) {
+      query = query.where('description', 'ilike', `%${params.term}%`);
+    }
+
     return query;
   }
 

@@ -22,7 +22,7 @@ export class OrderController {
 
   @Get()
   @ApiResponse({ status: 200, type: [Order] })
-  public async list(@Query() model: ListValidator) {
-    return this.orderRepository.list(model);
+  public async list(@Query() query: ListValidator) {
+    return this.orderRepository.list(query);
   }
 }
