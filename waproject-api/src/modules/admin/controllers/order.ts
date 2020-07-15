@@ -1,5 +1,5 @@
 import { ApiTags, ApiResponse } from '@nestjs/swagger';
-import { Controller, Post, Body, Get, Query } from '@nestjs/common';
+import { Controller, Post, Body, Get, Query, ParseIntPipe, Param } from '@nestjs/common';
 import { AuthRequired } from 'modules/common/guards/token';
 import { enRoles } from 'modules/database/interfaces/user';
 import { OrderRepository } from '../repositories/order';
@@ -24,5 +24,11 @@ export class OrderController {
   @ApiResponse({ status: 200, type: [Order] })
   public async list(@Query() query: ListValidator) {
     return this.orderRepository.list(query);
+  }
+
+  @Get(':orderId')
+  @ApiResponse({ status: 200, type: Order })
+  public async details(@Param('orderId', ParseIntPipe) orderId: number) {
+    return this.orderRepository.findById(orderId);
   }
 }
