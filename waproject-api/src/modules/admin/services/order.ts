@@ -30,4 +30,14 @@ export class OrderService {
 
     return this.orderRepository.update({ ...order, ...model });
   }
+
+  public async remove(orderId: number): Promise<void> {
+    const order = await this.orderRepository.findById(orderId);
+
+    if (!order) {
+      throw new NotFoundException('not-found');
+    }
+
+    return this.orderRepository.remove(orderId);
+  }
 }

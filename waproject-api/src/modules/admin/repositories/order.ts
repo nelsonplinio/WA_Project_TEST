@@ -38,4 +38,10 @@ export class OrderRepository {
   public async update(model: IOrder, transaction?: Transaction): Promise<Order> {
     return Order.query(transaction).updateAndFetchById(model.id, <Order>model);
   }
+
+  public async remove(id: number, transaction?: Transaction): Promise<void> {
+    await Order.query(transaction)
+      .del()
+      .where({ id });
+  }
 }
