@@ -1,0 +1,11 @@
+{
+  "project": "WA_PROJECT_WEB",
+  "repository": "WA_Project_Test",
+  "endpointDev": "http://localhost:3001",
+  "endpointProd": "",
+  "dockerImage": "waproject/wa-project-web",
+  "dockerCredentials": "",
+  "sentryDsn": "",
+  "confirmed": true,
+  "slug": "wa-project-web"
+}
