@@ -50,6 +50,8 @@ Uma aplicação de teste para a <strong><a href='https://www.waproject.com.br/'>
     
     yarn ou npm install
     
+    copiar .env.example para .env
+
     [sudo] docker-componse up
 
 ### Web
