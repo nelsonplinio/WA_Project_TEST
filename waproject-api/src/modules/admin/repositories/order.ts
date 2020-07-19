@@ -21,7 +21,11 @@ export class OrderRepository {
     }
 
     if (params.term) {
-      query = query.where('description', 'ilike', `%${params.term}%`);
+      if (!isNaN(Number(params.term))) {
+        query = query.where('id', Number(params.term));
+      } else {
+        query = query.where('description', 'ilike', `%${params.term}%`);
+      }
     }
 
     return query;

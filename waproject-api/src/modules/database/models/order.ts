@@ -16,7 +16,16 @@ export class Order extends Model implements IOrder {
   @ApiProperty({ type: 'integer' })
   public quantity: number;
 
+  @ApiProperty({ type: 'double' })
+  public get total(): number {
+    return this.quantity * this.value;
+  }
+
   public static get tableName(): string {
     return 'Order';
+  }
+
+  public static get virtualAttributes(): string[] {
+    return ['total'];
   }
 }
