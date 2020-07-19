@@ -17,7 +17,7 @@ Uma aplicação de teste para a <strong><a href='https://www.waproject.com.br/'>
 
   - <strong><a href='https://github.com/nelsonplinio/WA_Project_Test/tree/master/waproject-api'>waproject-api</a></strong>: Api do projeto.
   
-  - <strong href='https://github.com/nelsonplinio/WA_Project_Test/tree/master/waproject-base-web'><a>waproject-base-web</a></strong>: Cliente web do projeto.
+  - <strong><a href='https://github.com/nelsonplinio/WA_Project_Test/tree/master/waproject-base-web'>waproject-base-web</a></strong>: Cliente web do projeto.
 
   ## 🔧 Tecnologias
 
