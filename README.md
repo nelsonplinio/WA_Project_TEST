@@ -43,6 +43,15 @@ Uma aplicação de teste para a <strong><a href='https://www.waproject.com.br/'>
 ## 🚀 Instalar e usar
 
     git clone git@github.com:nelsonplinio/WA_Project_Test.git
+
+
+### Api
+    cd waproject-api
+    
+    yarn ou npm install
+    
+    [sudo] docker-componse up
+
 ### Web
     cd waproject-base-web
 
@@ -50,6 +59,3 @@ Uma aplicação de teste para a <strong><a href='https://www.waproject.com.br/'>
 
     yarn start ou npm run start
 
-### Api
-    yarn ou npm install
-    [sudo] docker-componse up
